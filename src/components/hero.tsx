@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="flex justify-center">
         <a
           href={TELEGRAM_LINK}
-          className="inline-flex bg-blue-500 text-white items-center justify-center px-5 py-3 text-base font-medium text-center rounded-lg focus:ring-4"
+          className="inline-flex bg-blue-500 text-white hover:bg-blue-700 ease-in-out transition w-48 items-center justify-center px-5 py-3 text-base font-semibold text-center rounded-lg focus:ring-4"
         >
           Join Telegram
         </a>

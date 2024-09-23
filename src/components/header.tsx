@@ -1,4 +1,5 @@
 import { NOTION_LINK, TELEGRAM_LINK } from "@/constants/links";
+import { LibraryBig, Megaphone } from "lucide-react";
 import Image from "next/image";
 
 export default function Header() {
@@ -14,7 +15,7 @@ export default function Header() {
             alt="Jelly Beans Logo"
             width={300}
             height={300}
-            className="w-10 h-10 -rotate-45 -translate-y-0.5"
+            className="w-10 h-10 -rotate-45 -translate-y-1"
           />
           <span className="self-center text-3xl font-semibold whitespace-nowrap font-sugar">
             Jelly Beans
@@ -47,10 +48,16 @@ export default function Header() {
         <div className="hidden w-full md:block md:w-auto" id="navbar-default">
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-4 rtl:space-x-reverse md:mt-0 md:border-0 ">
             <li>
-              <NavItem href={NOTION_LINK}>Resources</NavItem>
+              <NavItem href={NOTION_LINK}>
+                <LibraryBig size={20} />
+                <span>Resources</span>
+              </NavItem>
             </li>
             <li>
-              <NavItem href={TELEGRAM_LINK}>Contact</NavItem>
+              <NavItem href={TELEGRAM_LINK}>
+                <Megaphone size={20} />
+                <span>Contact</span>
+              </NavItem>
             </li>
           </ul>
         </div>
@@ -70,7 +77,7 @@ function NavItem({
     <a
       href={href}
       target="_blank"
-      className="inline-flex items-center justify-center whitespace-nowrap rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2"
+      className="inline-flex space-x-2 items-center justify-center whitespace-nowrap rounded-lg transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2"
     >
       {children}
     </a>
