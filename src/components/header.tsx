@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Header() {
   return (
-    <nav className="">
+    <header className="">
       <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a
           href="https://jellybeans.wtf/"
@@ -21,31 +21,7 @@ export default function Header() {
             Jelly Beans
           </span>
         </a>
-        <button
-          data-collapse-toggle="navbar-default"
-          type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm rounded-lg md:hidden focus:outline-none focus:ring-2"
-          aria-controls="navbar-default"
-          aria-expanded="false"
-        >
-          <span className="sr-only">Open main menu</span>
-          <svg
-            className="w-5 h-5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 17 14"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M1 1h15M1 7h15M1 13h15"
-            />
-          </svg>
-        </button>
-        <div className="hidden w-full md:block md:w-auto" id="navbar-default">
+        <nav className="w-full md:w-auto md:block hidden">
           <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border rounded-lg md:flex-row md:space-x-4 rtl:space-x-reverse md:mt-0 md:border-0 ">
             <li>
               <NavItem href={NOTION_LINK}>
@@ -60,9 +36,9 @@ export default function Header() {
               </NavItem>
             </li>
           </ul>
-        </div>
+        </nav>
       </div>
-    </nav>
+    </header>
   );
 }
 
